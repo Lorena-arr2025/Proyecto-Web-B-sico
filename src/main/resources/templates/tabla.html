@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Viaje Fácil - Tarifas y Servicios</title>
+</head>
+<body>
+
+<div th:replace="layout :: content"> 
+    
+    <h2 class="mb-4 text-center">Nuestra Flota y Tarifas Premium</h2>
+    
+    <div class="table-responsive">
+        <table class="table table-striped table-hover caption-top">
+            <caption>Listado de vehículos y características (Precios Base Estimados en ARS)</caption>
+            
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Servicio / Clase</th>
+                    <th scope="col">Vehículo Típico</th>
+                    <th scope="col">Tarifa Base Estimada (ARS)</th>
+                    <th scope="col">Capacidad Máxima</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <th scope="row">Viaje Fácil Estándar</th>
+                    <td>Sedán (Ej: Toyota Corolla, Nissan Versa)</td>
+                    <td>$2.500 ARS</td>
+                    <td>4 Pasajeros</td>
+                </tr>
+                <tr>
+                    <th scope="row">Viaje Fácil Comfort</th>
+                    <td>Sedán Superior (Ej: Honda Accord, VW Jetta)</td>
+                    <td>$3.750 ARS</td>
+                    <td>4 Pasajeros</td>
+                </tr>
+                <tr>
+                    <th scope="row">Viaje Fácil XL</th>
+                    <td>SUV/Minivan (Ej: Honda Pilot, Chevrolet Spin)</td>
+                    <td>$5.000 ARS</td>
+                    <td>6 Pasajeros</td>
+                </tr>
+                <tr>
+                    <th scope="row">Viaje Fácil Premium</th>
+                    <td>Sedán de Lujo (Ej: Audi A4, Mercedes Clase C)</td>
+                    <td>$7.500 ARS</td>
+                    <td>4 Pasajeros</td>
+                </tr>
+                <tr>
+                    <th scope="row">Viaje Fácil Van</th>
+                    <td>Furgoneta (Ej: Renault Master, Sprinter)</td>
+                    <td>$12.500 ARS</td>
+                    <td>12 Pasajeros</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-4 text-center">
+        <p class="lead">¡Explora la ciudad con el mejor servicio!</p>
+        <a href="/formulario" class="btn btn-dark btn-lg">¡Solicitar un Viaje!</a>
+    </div>
+
+</div>
+
+</body>
+</html>
