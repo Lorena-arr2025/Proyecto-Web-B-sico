@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pasajeros - ViajaFácil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h1 class="text-center text-primary mb-4">🚗 ViajaFácil</h1>
+    <h4 class="text-center text-secondary mb-4">Lista de Pasajeros</h4>
+
+    <div class="text-center mb-3">
+        <a th:href="@{/pasajero/nuevo}" class="btn btn-success">➕ Registrar nuevo pasajero</a>
+    </div>
+
+    <table class="table table-bordered table-hover shadow-sm">
+        <thead class="table-primary text-center">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="p : ${pasajeros}">
+                <td th:text="${p.nombre}"></td>
+                <td th:text="${p.apellido}"></td>
+                <td th:text="${p.email}"></td>
+                <td th:text="${p.telefono}"></td>
+                <td th:text="${p.direccion}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Viaje Fácil - Inicio</title>
+</head>
+<body>
+
+<div th:replace="layout :: content"> 
+    
+    <h1 class="text-center mb-4">Bienvenido a Viaje Fácil [cite: 17]</h1>
+    
+    <div class="text-center mb-4">
+        <img src="https://via.placeholder.com/600x300?text=Mapa+o+Vehiculo" class="img-fluid" alt="Mapa de Viaje">
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <iframe></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1lyOor67nZE?si=0YZqHr9Ljp_lv03G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+        <div class="col-md-6 mb-3">
+            <iframe width="100%" height="250" src="https://www.google.com/maps?q=buenos+aires&output=embed" allowfullscreen></iframe>
+        </div>
+    </div>
+    
+    <div class="text-center mt-4">
+        <a href="/formulario" class="btn btn-primary btn-lg">¡Reserva tu Viaje Ahora!</a>
+    </div>
+
+</div>
+
+</body>
+</html>

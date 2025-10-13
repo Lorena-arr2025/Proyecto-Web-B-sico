@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Viaje Fácil - Solicitar Viaje</title>
+</head>
+<body>
+
+<div th:replace="layout :: content"> 
+    
+    <h2 class="mb-4 text-center">Registro de Solicitud de Viaje</h2>
+    
+    <form action="#" th:action="@{/procesar-viaje}" method="post" class="needs-validation" novalidate>
+        
+        <div class="row g-3">
+            
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu nombre.
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <label for="email" class="form-label">Correo Electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="ejemplo@dominio.com" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa un correo válido.
+                </div>
+            </div>
+
+            <div class="col-12">
+                <label for="origen" class="form-label">Punto de Recogida (Calle y Número)</label>
+                <input type="text" class="form-control" id="origen" placeholder="Ej: Av. Principal 123" required>
+                <div class="invalid-feedback">
+                    Indica tu punto de recogida.
+                </div>
+            </div>
+
+            <div class="col-12">
+                <label for="destino" class="form-label">Destino Final</label>
+                <input type="text" class="form-control" id="destino" placeholder="Ej: Aeropuerto Internacional" required>
+                <div class="invalid-feedback">
+                    Indica tu destino.
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="pasajeros" class="form-label">Número de Pasajeros</label>
+                <input type="number" class="form-control" id="pasajeros" min="1" max="8" value="1" required>
+                <div class="invalid-feedback">
+                    Mínimo 1 pasajero.
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="servicio" class="form-label">Tipo de Vehículo</label>
+                <select class="form-select" id="servicio" required>
+                    <option selected disabled value="">Selecciona...</option>
+                    <option>Viaje Estándar</option>
+                    <option>Viaje Premium</option>
+                    <option>Furgoneta (Van)</option>
+                </select>
+                <div class="invalid-feedback">
+                    Selecciona un tipo de vehículo.
+                </div>
+            </div>
+
+            <div class="col-12 mt-4 text-center">
+                <button class="btn btn-success btn-lg" type="submit">Solicitar Viaje Fácil</button> 
+            </div>
+        </div>
+
+    </form>
+    
+    <script>
+        // Ejemplo de JavaScript para deshabilitar el envío del formulario si hay campos no válidos
+        (function () {
+          'use strict'
+          var forms = document.querySelectorAll('.needs-validation')
+          Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+              form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault()
+                  event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+              }, false)
+            })
+        })()
+    </script>
+    
+</div>
+
+</body>
+</html>
