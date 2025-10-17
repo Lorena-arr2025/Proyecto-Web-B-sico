@@ -22,8 +22,7 @@ public class Pasajero {
         this.direccion = direccion;
         this.fechaNac = fechaNac;
     }
-} 
- public String getNombre() { return nombre; }
+    public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
     public String getApellido() { return apellido; }
@@ -40,4 +39,5 @@ public class Pasajero {
 
     public LocalDate getFechaNac() { return fechaNac; }
     public void setFechaNac(LocalDate fechaNac) { this.fechaNac = fechaNac; }
-}
+} 
+ 
