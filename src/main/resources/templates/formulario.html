@@ -9,7 +9,8 @@
     
     <h2 class="mb-4 text-center">Registro de Solicitud de Viaje</h2>
     
-    <form action="#" th:action="@{/procesar-viaje}" method="post" class="needs-validation" novalidate>
+    <form th:action="@{/pasajero/guardar}" th:object="${pasajero}" method="post" class="needs-validation" novalidate>
+
         
         <div class="row g-3">
             

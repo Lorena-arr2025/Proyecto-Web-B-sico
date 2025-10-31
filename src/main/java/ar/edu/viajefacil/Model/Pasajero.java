@@ -2,7 +2,6 @@ package ar.edu.viajefacil.Model;
 
 import java.time.LocalDate;
 
-
 public class Pasajero {
 
     private String nombre;
@@ -12,16 +11,27 @@ public class Pasajero {
     private String direccion;
     private LocalDate fechaNac;
 
+    // Campos del viaje
+    private String origen;
+    private String destino;
+    private String tipoVehiculo;
+
     public Pasajero() {}
 
-    public Pasajero(String nombre, String apellido, String email, String telefono, String direccion, LocalDate fechaNac) {
+    public Pasajero(String nombre, String apellido, String email, String telefono, String direccion,
+                    LocalDate fechaNac, String origen, String destino, String tipoVehiculo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
         this.direccion = direccion;
         this.fechaNac = fechaNac;
+        this.origen = origen;
+        this.destino = destino;
+        this.tipoVehiculo = tipoVehiculo;
     }
+
+    // Getters y Setters
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
@@ -39,5 +49,13 @@ public class Pasajero {
 
     public LocalDate getFechaNac() { return fechaNac; }
     public void setFechaNac(LocalDate fechaNac) { this.fechaNac = fechaNac; }
-} 
- 
+
+    public String getOrigen() { return origen; }
+    public void setOrigen(String origen) { this.origen = origen; }
+
+    public String getDestino() { return destino; }
+    public void setDestino(String destino) { this.destino = destino; }
+
+    public String getTipoVehiculo() { return tipoVehiculo; }
+    public void setTipoVehiculo(String tipoVehiculo) { this.tipoVehiculo = tipoVehiculo; }
+}
