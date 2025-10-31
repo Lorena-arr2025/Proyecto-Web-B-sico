@@ -1,0 +1,35 @@
+1 Clonar el repositorio en tu netbook 
+Solo necesitas hacer esto una vez en la netbook para traer tu código desde GitHub: 
+git clone https://github.com/IvanBrianCruz/Uber_Clon.git 
+Esto descargará el proyecto y lo guardará en una carpeta llamada Uber_Clon. 
+Resumen del Flujo de Trabajo 
+
+Cuando cambias de dispositivo, sigue esta rutina: 
+1 Antes de empezar a trabajar en la PC/netbook 
+git pull origin main (descarga la última versión de GitHub) 
+2 Trabajas en el código [ a trabajar ; ) ] 
+3 ️ Cuando terminas y quieres sincronizar 
+git add . (prepara los cambios) 
+git commit -m "Mensaje" (guarda los cambios localmente) 
+git push origin main (sube los cambios a GitHub) 
+Cuando vayas a la otra computadora, simplemente repites el proceso desde el paso 1️. 
+
+Cuando se crea un proyecto y subir por primera vez a github : 
+git init                                                                           
+# Inicializar Git en la carpeta 
+git remote add origin URL_DEL_REPO_GITHUB   # Conectar con el repositorio de GitHub 
+git add .                                                                        
+git commit -m "Primer commit"                              
+git branch -M master                                                 
+git push -u origin master                                           
+# Agregar todos los archivos 
+# Guardar los cambios 
+# Asegurar que la rama principal sea 'master' 
+# Subir el proyecto a GitHub 
+Como hacer commit que se hacen diariamente para ver el avance del proyecto: 
+git add .                                                                        
+git commit -m "Primer commit"                              
+git push -u origin master                                           
+# Agregar todos los archivos 
+# Guardar los cambios 
+# Subir el proyecto a GitHub
